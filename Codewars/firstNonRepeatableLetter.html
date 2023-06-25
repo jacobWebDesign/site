@@ -1,0 +1,50 @@
+<script>
+
+   /* function firstNonRepeatingLetter(s) {
+        const arr = Array.from(s);
+        console.log(arr);
+        for (let i = 0; i < arr.length; i++) {
+            const el = arr[i].toLowerCase();
+            let count = 0;
+            for (let i2 = 0; i2 < arr.length; i2++) {
+                const el2 = arr[i2].toLowerCase();
+                if (el == el2) {
+                    count++;
+                };
+            };
+            console.log(count);
+            if (count == 1) {
+                return arr[i];
+            } else {
+                count = 0;
+            };
+            
+        }
+        return "";
+    }*/
+
+
+/*  function firstNonRepeatingLetter(s) {
+  var t=s.toLowerCase();
+  for (var x=0;x<t.length;x++){
+    if(t.indexOf(t[x]) === t.lastIndexOf(t[x]))
+      return s[x];
+  }
+    return "";
+}*/
+
+function firstNonRepeatingLetter(s){
+    let t = s.toLowerCase();
+    for(let x = 0; x < t.length; x++){
+        if(x === t.lastIndexOf(t[x]))
+        return s[x];
+    }
+    return "";
+}
+    console.log(firstNonRepeatingLetter("Penis"));
+
+
+
+
+
+</script>

@@ -1,0 +1,29 @@
+<script>
+
+    function domainName(url) {
+
+        // let domain = url.replace("www.", "");
+        // let lastDot = domain.lastIndexOf(".");
+        // while (lastDot >= 0){
+        //     domain = domain.substr(0, lastDot);
+        //     lastDot = domain.lastIndexOf(".");
+        // }
+        // let slash = domain.lastIndexOf("/");
+        // if (slash >= 0) domain = domain.substr(slash + 1);
+        
+        // return domain;
+
+        url = url.replace("www.", "");
+        url = url.replace("https://", "");
+        url = url.replace("http://", "");
+        return url.split(".")[0];
+
+
+
+    }
+
+    console.log(domainName("https://o9j9ut-4mzgcf.co.uk/default.html"))
+
+
+
+</script>

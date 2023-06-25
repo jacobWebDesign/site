@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub Podgórski</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+
+
+
+</head>
+
+<body>
+    <div id="nav">
+        <a href="#aboutme">O mnie</a>
+        <a href="#mywork">Moje prace</a>
+        <a href="#contact">Kontakt</a>
+    </div>
+
+    <main>
+        <div class="section">
+            <h1 id="typed">Hej! Szukasz może webDevelopera?</h1>
+            <div class="video-container">
+                <div id="overlay"></div>
+                <video src="tropical beach loop extended.mp4" autoplay loop muted></video>
+            </div>
+        </div>
+        <div id="banner">
+
+            <div class="content">
+                <a id="aboutme"></a>
+                <h1>O mnie</h1>
+                <p>Hej! Jestem Kuba i mam 20 lat. Niedawno skończyłem technikum o kierunku informatycznym, a z informatyką wiążę swoją przyszłość. W
+                    szkole nauczyłem się wielu rzeczy:
+                    <ul>
+                        <li>Montaż i naprawa komputerów</li>
+                        <li>Obsługiwanie systemów <ol><li>różne dystrybucje Linuxa - Ubuntu, Mint, Debian itd.,</li> <li>Windows Server,</li><li>Windows</li></ol></li>
+                        <li>Podstawy grafiki wektorowej i rastrowej</li>
+                        <li>Obsługe pakietu biurowego Office</li>
+                        <li>Administracja i eksploatacja sieci</li>
+                        <li>Tworzenie i administracja baz danych</li>
+                    </ul>
+                    
+                    <h2>Do tego podstaw języków takich jak:</h2>
+                <div class="grid">
+                    <img src="html.png" alt="HTML" class="icon" title="HTML">
+                    <img src="css-3.png" alt="CSS" class="icon" title="CSS">
+                    <img src="js.png" alt="JavaScript" class="icon" title="JavaScript">
+                    <img src="mysql.png" alt="MySQL" class="icon" title="MySQL">
+                    <img src="php-programming-language.png" alt="PHP" class="icon" title="PHP">
+
+                </div>
+
+                </p>
+                <p>W tej chwili doszkalam się w HTML, CSS oraz Javascript. W niedalekiej przyszłości mam zamiar uczyć
+                    się React.js.<br />
+                    Oprócz tego nauczyłem się podstaw CMS tj.: Wordpress, Shopify, Joomla.
+                <div class="grid">
+                    <img src="joomla.png" alt="Joomla" class="icon" title="Joomla">
+                    <img src="wordpress.png" alt="WordPress" class="icon" title="WordPress">
+                    <img src="shopify.png" alt="Shopify" class="icon" title="Shopify">
+                </div>
+                Cechują mnie:
+                <ul>
+                    <li>Komunikatywność</li>
+                    <li>Szczerość</li>
+                    <li>Życzliwość</li>
+                    <li>Dobra znajomość języka angielskiego</li>
+                    <li>Umiejętność pracy w zespole</li>
+                </ul>
+                </p>
+            </div>
+
+            <!--<div class="sites">
+                <a href="http://alden24.com" target="_blank" rel="noopener noreferrer"><img src="alden.jpg" alt="Alden Shop" title="Alden" class="site"></a>
+                <a href="http://alarm-gostyn.pl" target="_blank" rel="noopener noreferrer"><img src="alarm-gostyn.jpg" alt="Alarm-gostyn" class="site"></a>
+                <a href="http://pomocwzakupieauta.pl" target="_blank" rel="noopener noreferrer"><img src="pomocwzakupieauta.jpg" alt="pomocwzakupieauta.pl" class="site"></a>
+            </div> -->
+            <a id="mywork"></a>
+            <h1>Moje projekty komercyjne</h1>
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <a href="http://alden24.com" target="_blank" rel="noopener noreferrer"><img src="alden.jpg"
+                            style="width:100%" title="Kliknij aby przejść do strony!"></a>
+                    <div class="text">Alden Shop</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <a href="http://pomocwzakupieauta.pl" target="_blank" rel="noopener noreferrer"><img
+                            src="pomocwzakupieauta.jpg" style="width:100%" title="Kliknij aby przejść do strony!"></a>
+                    <div class="text">Pomoc w zakupie auta</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <a href="https://alarm-gostyn.pl" target="_blank"><img src="alarm-gostyn.jpg"
+                            style="width:100%" title="Kliknij aby przejść do strony!"></a>
+                    <div class="text">Alarm-gostyn</div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+
+            
+            <div class="content">
+                <h1>Moje plany na przyszłość</h1>
+                <p>
+                    <h2>Studia</h2>W tym roku idę na studia zaoczne na kierunek informatyczny.<br>
+                    Moimi wyborami są:
+                    <ul>
+                        <li><a href="https://www.put.poznan.pl/">Politechnika Poznańska</a></li>
+                        <li><a href="https://amu.edu.pl/">Uniwersytet Adama Mickiewicza w Poznaniu</a></li>
+                    </ul>
+                    <h2>Co poza studiami?</h2>
+                    W czasie kiedy będę studiował chcę kształcić się pod okiem doświadczonych programistów w roli <strong>stażysty,</strong>
+                    a później, dzięki ciężkiej pracy, determinacji i odrobiny szczęścia, chcę pracować jako <strong>Junior WebDeveloper.</strong><br><br>
+                    W czasie kiedy przeszukiwałem rynek pracy dowiedziałem się o <i>testerze oprogramowania.</i> <br>
+                    Temat bardzo mnie ciekawi i chętnie sprawdziłbym jak radzę sobie w tej roli.<br><br>
+
+                    
+
+                <h3>Jestem otwarty na propozycje!</h3>
+                </p>
+            </div>
+            <a id="contact"></a>
+            <div id="kontakt">
+
+                <div class="xd">
+
+                    <div class="left">
+                        <a href="mailto:jakubpodgorski521@gmail.com"><img src="mail.png" class="icon"></a>
+                    </div>
+
+
+
+                    <div style="margin-bottom: 100px">
+                        <h1>Kontakt</h1>
+                        Jeśli potrzebujesz więcej informacji zapraszam do kontaktu! <br><br>
+                        <strong>Mail: </strong><a href="mailto:jakubpodgorski521@gmail.com">jakubpodgorski521@gmail.com</a><br>
+                        <strong>Telefon:</strong> +48 725 196 671
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+
+
+    </main>
+    <footer>
+        <div>Ikony pobrane ze strony: <a href="https://www.flaticon.com/free-icons/html" title="html icons">Flaticon</a>
+        </div>
+        <div>Strona zrobiona przez: Jakub Podgórski</div>
+    </footer>
+</body>
+<script>
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+    // Pobiera zawartość nagłówka o id: "typed"
+    let test = document.getElementById("typed").innerHTML;
+    let defTest = test;
+    let test1 = "To chyba go znalazłeś!";
+    let c = 0;
+
+
+    //Określa długość frazy wpisanej w ww. nagłówku
+    let i = test.length;
+    let p = 0;
+    //Ten taki śmieszny znak kursora
+    function pointer() {
+        setTimeout(() => {
+            if (p % 2 == 1) { // Jeśli reszta z dzielenia jest równa 1 wyświetla zawartość nagłówka z kreską
+                document.getElementById("typed").innerHTML = test + "|"; //     ^
+                p++;//Inkrementacja P                                           |
+                pointer(); //Wywołanie funkcji
+            } else if (p >= 4) {    //Jeśli funkcja wywaołana została 14 razy, rozpocznie się kasowanie liter
+                p = 0;              //Reset p
+                reverseLoop();
+            } else {
+                document.getElementById("typed").innerHTML = test.substr(0, i);
+                p++;
+                pointer();
+            }
+
+        }, 600);
+
+    }
+
+    function reverseLoop() {
+        setTimeout(() => {
+            document.getElementById("typed").innerHTML = test.substr(0, i - 1) + "|";
+            i--;
+            if (i == 0) {
+                if (c === 0) {
+                    test = test1;
+                    c = 1;
+                } else {
+                    test = defTest;
+                    c = 0;
+                }
+
+                loop();
+            } else {
+                reverseLoop();
+            }
+        }, 40);
+
+    }
+
+    function loop() {
+        setTimeout(() => {
+            document.getElementById("typed").innerHTML = test.substr(0, i + 1) + "|";
+            i++;
+            if (i < test.length) {
+                loop();
+                //console.log(test.length - 1, "/", i)
+            } else {
+                // console.log("Wykonuje się")
+                pointer();
+            }
+        }, 80);
+
+    };
+    pointer();
+
+
+
+
+</script>
+
+</html>

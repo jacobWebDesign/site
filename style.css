@@ -1,0 +1,369 @@
+/* * {
+    border: dashed 2px red;
+} */
+
+*{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(253, 253, 253);
+    color: #332C39;
+    margin: 0;
+    font-family: "Roboto", "sans-serif";
+    font-size: larger;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+#nav a {
+    padding: 4px;
+    text-decoration: none;
+    color: #332C39;
+    transition: 30ms;
+}
+
+#nav a:hover {
+    font-weight: 700;
+    transform: scale(1.1);
+    
+    transition: 70ms;
+}
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 25px;
+    width: 100%;
+    /*background-color: #332C39;*/
+    height: 50px;
+    position: absolute;
+
+
+    z-index: 1;
+
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+
+    z-index: -1;
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.995);
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    opacity: 0.1;
+
+
+
+}
+
+video {
+    width: 210vh;
+    opacity: 1;
+
+}
+
+.content, .sites {
+    background-color: white;
+    border-radius: 13px;
+    padding: 30px;
+    text-align: justify;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.175);
+    margin-bottom: 30px;
+}
+
+.content p {
+    -webkit-text-size-adjust: auto;
+}
+
+#banner {
+    /* background-image: linear-gradient(90deg,#609EA2, #F0EEED); */
+    padding: 40px 10px 40px 10px;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    flex-direction: column;
+
+}
+
+footer a,.content a, #kontakt a{
+    text-decoration: none;
+    transition: 70ms;
+    color: rgb(130, 199, 248);
+}
+
+footer a:hover, .content a:hover, #kontakt a:hover {
+    display: inline-block;
+    transform: scale(1.02);
+    font-weight: 500;
+    transition: 40ms;
+}
+
+h1
+ {
+    font-size: 3em;
+}
+
+
+
+
+.content,
+.other, .sites {
+
+    width: 65%;
+    
+
+
+}
+footer {
+    background-color: #332C39;
+    height: 150px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 48;
+    vertical-align: baseline;
+}
+
+h2 {
+    width: fit-content;
+    transition: 70ms;
+
+
+}
+
+h2:hover {
+    transform: scale(1.05);
+    transition: 40ms;
+
+}
+
+li {
+    transition: 20ms;
+}
+
+li:hover {
+    font-weight: 500;
+    transition: 20ms;
+}
+
+
+
+
+
+
+.icon {
+    width: 128px;
+    transform: scale(0.9);
+
+    transition: 70ms;
+
+}
+
+.icon:hover {
+    transform: scale(1);
+    transition: 40ms;
+    
+    -webkit-filter: drop-shadow(5px 5px 5px rgb(34, 34, 34)d1d);
+    filter: drop-shadow(0 5px 7px rgba(68, 68, 68, 0.428));
+}
+.sites {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sites img {
+   
+   width: 600px; 
+    
+}
+
+
+#kontakt {
+    background-color: white;
+    max-width: fit-content;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #d4d4d4;
+    
+}
+
+.xd {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 0;
+    
+
+}
+
+
+@media only screen and (max-width: 1373px) {
+    .xd h1, .xd {
+        text-align: center;
+    }
+}
+.left {
+    padding: 30px;
+    
+    max-width: fit-content;
+
+}
+.left img {
+    padding: 30px;
+    width: 120px;
+    
+}
+
+
+
+/*#kontakt {
+    display: flex;
+    flex-direction: row;
+}*/
+
+
+
+.sites a {
+    width: min-content;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0 40px 0;
+}
+.content:nth-of-type(n + 2){
+    margin-top: 50px;
+}
+.slideshow-container {
+    max-width: 68%;
+    position: relative;
+    margin: auto;
+    
+    box-shadow: 5px 5px 10px rgb(168, 168, 168);
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }

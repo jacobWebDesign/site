@@ -1,0 +1,49 @@
+<script>
+/* function generateHashtag (str) {
+    if(str.length <= 1) return false;
+    str = str.split(" ");
+    let filtered = str.filter( function(v) {
+        if(v !== " ") return v;
+    })
+    filtered.unshift("#");
+    for (let i = 0; i < filtered.length; i++){
+        const el = filtered[i];
+        const rest = el.substring(1)
+        filtered[i] = el[0].toUpperCase() + rest
+    };
+    result = filtered.join("");
+    
+    if(result.length < 141 && result !== "#") {
+        return result;
+    } else {
+        return false;
+    }
+  
+} */
+
+/* function generateHashtag (str) {
+   //if(!str || str.length < 1) return false;
+   
+   var r = '#' + str.split(' ').map(function(el) {
+     return el.charAt(0).toUpperCase() + el.slice(1).toLowerCase();
+   }).join('');
+   return r.length > 140?false:r;
+} */
+
+function generateHashtag(str){
+    if(!str || str.length < 1) return false;
+
+    let result = "#" + str.split(" ").map(function(el){
+        return el.charAt(0).toUpperCase() + el.slice(1).toLowerCase();
+    }).join("");
+    return result.length > 140?false:result;
+}
+
+console.log(generateHashtag(" Hello  woasdasdasdassadsadadsdasasdasdshdfagshdfaghsdghasfghashgfasdhgfasdhgfasdhgfasdhgfasdghfadshgadshgfasdghfdasasdfghasd"));
+console.log(generateHashtag(" Hello asdasdasdasdsdasadsaddssdadsasadadsdasadsasdsa  asdasd woasdasdasdassadsadadsdasasdasdshdfagshdfaghsdghasfghashgfasdhgfasdhgfasdhgfasdhgfasdghfadshgadshgfasdghfdasasdfghasd"));
+console.log(generateHashtag(" "));
+
+
+
+    
+</script>

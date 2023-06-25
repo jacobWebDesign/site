@@ -1,0 +1,37 @@
+<script>
+
+
+
+
+function isPangram(string){
+  const alphabet = "A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z".split(", ");
+  const t = string.toUpperCase();
+
+  
+  let count = 0;
+  for (let i = 0; i < alphabet.length; i++){
+    const el = alphabet[i];
+    count = 0;
+    
+    for(let i2 = 0; i2< t.length; i2++){
+      const el2 = t[i2].toUpperCase();
+      console.log("Czy ", el, "jest równe", el2);
+      if(el === el2) {
+        count++;
+        break;
+      }
+      console.log(count);
+      
+    }
+    console.log("Liczba liter: ", count);
+    if(count > 0){
+      continue;
+    } else {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(isPangram("The quick brown fox jumps over the lazy dog."));
+</script>

@@ -1,0 +1,44 @@
+<script>
+
+    function duplicateCount(text) {
+        let newArr = [];
+        let reducedArr = [];
+        //Tworzenie tablicy z łańcucha tekstu
+        for (let i = 0; i < text.length; i++) {
+            const el = text[i];
+            newArr[i] = el.toLowerCase();
+        }
+        //Zmiana każdego elementu tablicy na małą literę
+
+        //Tworzenie tablicy liter bez powtórzeń
+        for (let i = 0; i < text.length; i++) {
+            const el = text.charAt(i).toLowerCase();
+            if (reducedArr.indexOf(el) == -1) reducedArr.unshift(el);
+        }
+
+        
+        console.log(reducedArr);
+        let letters = 0;
+        let result = 0;
+        
+        for(let i = 0; i < reducedArr.length; i++){
+            const el = reducedArr[i];
+            console.log(el, "sprawdzane")
+            for(i2 = 0; i2 < newArr.length; i2++){
+                let el2 = newArr[i2];
+                console.log(el2);
+                if(el == el2) letters++;
+            }
+            if(letters > 1) result++;
+            
+            console.log(letters);
+            letters = 0;
+        }
+        console.log(result);
+        return result;
+    }
+
+    console.log("Ile jest zduplikowanych cyfr:", duplicateCount("aaaaabbbeeeEEBcde"));
+
+
+</script>

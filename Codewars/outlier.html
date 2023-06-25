@@ -1,0 +1,45 @@
+<script>
+
+
+    function findOutlier(integers) {
+        let arr = integers;
+        isEven = function () {
+            let odd = 0;
+            let even = 0
+            for (let i = 0; i < arr.length; i++) {
+                const el = arr[i];
+                if (el % 2 === 0) {
+                    even++;
+                } else {
+                    odd++;
+                };
+            };
+            console.log("Parzyste: ", even, "Nieparzyste: ", odd);
+
+            if (even > odd) {
+                console.log("Większość jest parzysta")
+                return true;
+            } else {
+                console.log("Większość jest nieparzysta")
+
+                return false;
+            }
+        };
+
+        
+        
+        console.log(isEven());
+        if (isEven()) {
+            for(const el of arr){
+                if (el%2 === 1) return el;
+            }
+        } else {
+            for(const el of arr){
+                if (el%2 === 0) return el;
+            }
+    }
+}
+
+    console.log(findOutlier([0,0,3,0,0]));
+
+</script>

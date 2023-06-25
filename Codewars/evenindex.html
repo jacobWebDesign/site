@@ -1,0 +1,56 @@
+<script>
+
+    function findEvenIndex(arr) {
+
+        /*for ( let i = 0; i < arr.length; i++){
+            let left = 0;
+            var right = 0;
+            let index = arr.length - 1;
+            while( index > i){
+                right += arr[i];
+                i--;
+                console.log(right);
+            }
+            
+        
+            
+         
+        
+        }*/
+
+        let right;
+            let left;
+            console.log()
+        while (left != right || typeof left == "undefined") {
+            
+            for(let index = 0; index < arr.length; index++){
+            let i2 = arr.length - 1;
+
+            while (index < i2) {
+
+                //console.log(arr[i2]);
+                right += arr[i2];
+                //console.log("Prawa strona po indeksie: ", right);
+                i2--;
+
+            }
+            let i3 = 0;
+            console.log("TERA LEWA");
+            while (index > i3) {
+
+                console.log(arr[i3]);
+                left += arr[i3];
+                console.log("Lewa strona po indeksie: ", left);
+                i3++;
+
+            }}
+        }
+    }
+
+
+    console.log(findEvenIndex([1, 100, 50, -51, 1, 1]))
+
+
+
+
+</script>

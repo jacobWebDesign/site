@@ -1,0 +1,19 @@
+<script>
+
+function toCamelCase(str){
+    str = str.replace(/_/g, " ");
+    str = str.replace(/-/g, " ");
+    let newArr = str.split(" ").map(function(v, index){
+        return index > 0? v[0].toUpperCase() + v.substring(1): v;
+    } );
+    str = newArr.join("");
+    
+    
+    
+    return str;
+}
+
+console.log(toCamelCase("the_stealth-warrior"))
+
+
+</script>

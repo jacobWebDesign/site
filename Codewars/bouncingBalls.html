@@ -1,0 +1,23 @@
+<script>
+
+
+
+function bouncingBall(h,  bounce,  window) {
+  if (h === 0) return -1;
+  if (bounce >= 1 || bounce <= 0) return -1;
+  if (window >= h) return -1;
+  let result =0;
+  while (h > window){
+    console.log("h: ", h)
+    h > window? result++: console.log("nope");
+    h *= bounce;
+    h > window? result++: console.log("nope")
+    
+  }
+  
+  return result;
+  
+}
+
+console.log(bouncingBall(30, 0.66, 1.5))
+</script>
