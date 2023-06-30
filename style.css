@@ -87,11 +87,11 @@ video {
 }
 
 .content, .sites {
-    background-color: white;
+    /* background-color: white; */
     border-radius: 13px;
     padding: 30px;
     text-align: justify;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.175);
+    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.175); */
     margin-bottom: 30px;
 }
 
@@ -99,9 +99,9 @@ video {
     -webkit-text-size-adjust: auto;
 }
 
-#banner {
+#banner, .background{
     /* background-image: linear-gradient(90deg,#609EA2, #F0EEED); */
-    padding: 40px 10px 40px 10px;
+    padding: 0 10px 40px 10px;
     z-index: 1;
     width: 100%;
     display: flex;
@@ -109,7 +109,29 @@ video {
     align-items: center;
     font-size: 1.5rem;
     flex-direction: column;
+    
 
+}
+
+.background {
+    margin: 0 0 20px 0;
+    /* background-color: #332C39; */
+    color: #fafafa;
+    background-image: url(sky.jpg);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 5px 5px 10px#332c398c;
+}
+
+
+.background:first-child {
+    background-image: none;
+    background-color: #332C39;
+}
+
+.background:nth-child(n + 2) {
+    margin-top: 20px;
 }
 
 footer a,.content a, #kontakt a{
@@ -220,11 +242,11 @@ li:hover {
 
 
 #kontakt {
-    background-color: white;
+    /* background-color: white; */
     max-width: fit-content;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 5px 5px 10px #d4d4d4;
+    /* box-shadow: 5px 5px 10px #d4d4d4; */
     
 }
 
@@ -238,6 +260,10 @@ li:hover {
     padding: 0 20px 0 0;
     
 
+}
+
+.xd div {
+    max-width: 800px;
 }
 
 
