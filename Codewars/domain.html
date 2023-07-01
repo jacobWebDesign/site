@@ -1,29 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jakub Podgórski</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    
+    
+    
+    
+    </head>
+    
+    <body>
+        <main>
+    
+        <nav>
+            <a href="index.html">Spis skryptów</a>
+            <a href="../index.html">Strona główna</a>
+        </nav>
+    
+
+
+
+
+        <div class="content">
+            <h1>Wyszukiwarka domen</h1>
+        <p>Wpisz tutaj adres strony internetowej, a skrypt wyświetli domenę. <br> Żeby skrypt działał prawidłowo adres musi być wpisany poprawnie</p>
+        <input type="text" id="prompt" placeholder="https://google.co.uk">
+        
+        <button type="submit" onclick="domainName()">Submit</button>
+        <p id="result"></p>
+        </div>
+    
+</main>
+
+
+
+</body>
+
+
 <script>
 
-    function domainName(url) {
-
-        // let domain = url.replace("www.", "");
-        // let lastDot = domain.lastIndexOf(".");
-        // while (lastDot >= 0){
-        //     domain = domain.substr(0, lastDot);
-        //     lastDot = domain.lastIndexOf(".");
-        // }
-        // let slash = domain.lastIndexOf("/");
-        // if (slash >= 0) domain = domain.substr(slash + 1);
+    function domainName() {
+        let url = document.getElementById("prompt").value;
+        console.log(url);
+        let domain = url.replace("www.", "");
+        let lastDot = domain.lastIndexOf(".");
+        while (lastDot >= 0){
+            domain = domain.substr(0, lastDot);
+            lastDot = domain.lastIndexOf(".");
+        }
+        let slash = domain.lastIndexOf("/");
+        if (slash >= 0) domain = domain.substr(slash + 1);
         
-        // return domain;
+        document.getElementById("result").innerHTML = "Domena wynikająca z adresu: " + "<strong>" + domain + "</strong>";
 
-        url = url.replace("www.", "");
-        url = url.replace("https://", "");
-        url = url.replace("http://", "");
-        return url.split(".")[0];
+        
+        return domain;
+
+        // url = url.replace("www.", "");
+        // url = url.replace("https://", "");
+        // url = url.replace("http://", "");
+        // return url.split(".")[0];
 
 
 
     }
 
-    console.log(domainName("https://o9j9ut-4mzgcf.co.uk/default.html"))
+//     function domainName(url) {
+
+// let domain = url.replace("www.", "");
+// let lastDot = domain.lastIndexOf(".");
+// while (lastDot >= 0){
+//     domain = domain.substr(0, lastDot);
+//     lastDot = domain.lastIndexOf(".");
+// }
+// let slash = domain.lastIndexOf("/");
+// if (slash >= 0) domain = domain.substr(slash + 1);
+
+// return domain;
+
+// // url = url.replace("www.", "");
+// // url = url.replace("https://", "");
+// // url = url.replace("http://", "");
+// // return url.split(".")[0];
+
+
+
+// }
+
+    
 
 
 
 </script>
+
+
+</html>
+
+
+
+
+
+
+

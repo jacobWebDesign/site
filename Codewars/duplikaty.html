@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jakub Podgórski</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    
+    
+    
+    
+    </head>
+    
+    <body>
+        <main>
+    
+        <nav>
+            <a href="index.html">Spis skryptów</a>
+            <a href="../index.html">Strona główna</a>
+        </nav>
+    
+        
+
+
+        <div class="content">
+            <h1>Zduplikowane znaki</h1>
+            <p>Skrypt wykrywa ile znaków występuje więcej niż jeden raz. Wielkość liter ani kolejność nie ma znaczenia</p>
+            <input type="text" id="prompt" placeholder="aaaaabbbeeeEEBcde">
+            <button type="submit" onclick="duplicateCount()">Sprawdź</button>
+            <p id="result"></p>
+        </div>
+    
+</main>
+
+
+
+</body>
+
+
+<script>
+
+    function duplicateCount() {
+        let text = document.getElementById("prompt").value;
+        let newArr = [];
+        let reducedArr = [];
+        //Tworzenie tablicy z łańcucha tekstu
+        for (let i = 0; i < text.length; i++) {
+            const el = text[i];
+            newArr[i] = el.toLowerCase();
+        }
+        //Zmiana każdego elementu tablicy na małą literę
+
+        //Tworzenie tablicy liter bez powtórzeń
+        for (let i = 0; i < text.length; i++) {
+            const el = text.charAt(i).toLowerCase();
+            if (reducedArr.indexOf(el) == -1) reducedArr.unshift(el);
+        }
+        console.log(reducedArr);
+        let letters = 0;
+        let result = 0;
+        
+        for(let i = 0; i < reducedArr.length; i++){
+            const el = reducedArr[i];
+            console.log(el, "sprawdzane")
+            for(i2 = 0; i2 < newArr.length; i2++){
+                let el2 = newArr[i2];
+                console.log(el2);
+                if(el == el2) letters++;
+            }
+            if(letters > 1) result++;
+            
+            console.log(letters);
+            letters = 0;
+        }
+        document.getElementById("result").innerHTML = "Liter, które występują więcej niż jeden raz jest: " + result;
+        return result;
+    }
+
+    
+
+
+</script>
+
+</html>
+
+
+
+
+
+
+

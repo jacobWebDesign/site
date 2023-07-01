@@ -1,50 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jakub Podgórski</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    
+    
+    
+    
+    </head>
+    
+    <body>
+        <main>
+    
+        <nav>
+            <a href="index.html">Spis skryptów</a>
+            <a href="../index.html">Strona główna</a>
+        </nav>
+    
+        
+
+        <div class="content">
+            <h1>Pierwsza niepowtarzająca się litera w łancuchu znaków</h1>
+            <p>Wielkość ani kolejność liter nie ma znaczenia</p>
+            <input type="text" id="prompt">
+            <button type="submit" onclick="firstNonRepeatingLetter()">Submit</button>
+            <p id="result"></p>
+    
+        </div>
+    
+</main>
+
+
+
+</body>
+
+
 <script>
 
-   /* function firstNonRepeatingLetter(s) {
-        const arr = Array.from(s);
-        console.log(arr);
-        for (let i = 0; i < arr.length; i++) {
-            const el = arr[i].toLowerCase();
-            let count = 0;
-            for (let i2 = 0; i2 < arr.length; i2++) {
-                const el2 = arr[i2].toLowerCase();
-                if (el == el2) {
-                    count++;
-                };
-            };
-            console.log(count);
-            if (count == 1) {
-                return arr[i];
+     function firstNonRepeatingLetter() {
+        let s = document.getElementById("prompt").value;
+         const arr = Array.from(s);
+         console.log(arr);
+         console.log(s);
+         if (document.getElementById("prompt") && document.getElementById("prompt").value) {
             } else {
-                count = 0;
-            };
+                document.getElementById("result").innerHTML = "Jest to pusty ciąg znaków";
+                return;
+            }
             
-        }
-        return "";
-    }*/
+         for (let i = 0; i < arr.length; i++) {
+             const el = arr[i].toLowerCase();
+             let count = 0;
+             for (let i2 = 0; i2 < arr.length; i2++) {
+                 const el2 = arr[i2].toLowerCase();
+                 if (el == el2) {
+                     count++;
+                 };
+             };
+             console.log(count);
+             if (count == 1) {
+                document.getElementById("result").innerHTML = "Pierwszą niepowtarzającą się literą jest: " + arr[i];
+                 return arr[i];
+             } else {
+                 count = 0;
+             };
+             
+         }
+         document.getElementById("result").innerHTML = "W tym łańcuchu znaków nie ma niepowtarzającej się litery";
+         return "";
+     }
+ 
+ 
+ /*  function firstNonRepeatingLetter(s) {
+   var t=s.toLowerCase();
+   for (var x=0;x<t.length;x++){
+     if(t.indexOf(t[x]) === t.lastIndexOf(t[x]))
+       return s[x];
+   }
+     return "";
+ }*/
+ 
+//  function firstNonRepeatingLetter(s){
+//      let t = s.toLowerCase();
+//      for(let x = 0; x < t.length; x++){
+//          if(x === t.lastIndexOf(t[x]))
+//          return s[x];
+//      }
+//      return "";
+//  }
+//      console.log(firstNonRepeatingLetter(""));
+ 
+ 
+ 
+ 
+ 
+ </script>
 
 
-/*  function firstNonRepeatingLetter(s) {
-  var t=s.toLowerCase();
-  for (var x=0;x<t.length;x++){
-    if(t.indexOf(t[x]) === t.lastIndexOf(t[x]))
-      return s[x];
-  }
-    return "";
-}*/
-
-function firstNonRepeatingLetter(s){
-    let t = s.toLowerCase();
-    for(let x = 0; x < t.length; x++){
-        if(x === t.lastIndexOf(t[x]))
-        return s[x];
-    }
-    return "";
-}
-    console.log(firstNonRepeatingLetter("Penis"));
+</html>
 
 
 
 
 
-</script>
+
+
